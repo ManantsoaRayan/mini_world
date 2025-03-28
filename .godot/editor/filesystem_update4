@@ -1,6 +1,2 @@
-res://player/player.tscn
-res://player/follow_camera.gd
 res://game.tscn
-res://stage/stage.tscn
-res://player/player.gd
-res://coin/coin.gd
+res://player/player_glow.tres

@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody3D
 
+
 enum _Anim {
 	FLOOR,
 	AIR,
@@ -33,14 +34,6 @@ var coins := 0
 @onready var _camera := $Target/Camera3D as Camera3D
 @onready var _animation_tree := $AnimationTree as AnimationTree
 
-func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
-func _input(event):
-	if event is InputEventMouseMotion:
-		# Inverser le mouvement de la souris en multipliant par -1
-		rotate_y(deg_to_rad(-event.relative.x))
-
 
 func _physics_process(delta):
 	if Input.is_action_pressed("reset_position") or global_position.y < -12:
@@ -49,6 +42,7 @@ func _physics_process(delta):
 		velocity = Vector3.ZERO
 
 	# Update coin count and its "parallax" copies.
+	# This gives text a pseudo-3D appearance while still using Label3D instead of the more limited TextMesh.
 	%CoinCount.text = str(coins)
 	%CoinCount.get_node("Parallax").text = str(coins)
 	%CoinCount.get_node("Parallax2").text = str(coins)
@@ -154,7 +148,7 @@ func _physics_process(delta):
 
 	if shoot_blend > 0:
 		shoot_blend *= 0.97
-		if shoot_blend < 0:
+		if (shoot_blend < 0):
 			shoot_blend = 0
 
 	if shoot_attempt and not prev_shoot:
@@ -182,17 +176,27 @@ func _physics_process(delta):
 	_animation_tree[&"parameters/gun/blend_amount"] = minf(shoot_blend, 1.0)
 
 
-func adjust_facing(facing: Vector3, target: Vector3, step: float, adjust_rate: float, current_gn: Vector3) -> Vector3:
+func adjust_facing(facing: Vector3, target: Vector3, step: float, adjust_rate: float, \
+		current_gn: Vector3) -> Vector3:
 	var normal := target
 	var t := normal.cross(current_gn).normalized()
 
 	var x := normal.dot(facing)
 	var y := t.dot(facing)
 
-	var ang := atan2(y, x)
+	var ang := atan2(y,x)
 
 	if absf(ang) < 0.001:
 		return facing
 
+	var s := signf(ang)
+	ang = ang * s
 	var turn := ang * adjust_rate * step
-	return (normal * cos(turn) + t * sin(turn)) * facing.length()
+	var a: float
+	if ang < turn:
+		a = ang
+	else:
+		a = turn
+	ang = (ang - a) * s
+
+	return (normal * cos(ang) + t * sin(ang)) * facing.length()
