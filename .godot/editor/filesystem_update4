@@ -1,2 +1,5 @@
+res://player/player.gd
 res://game.tscn
 res://player/player_glow.tres
+res://stage/stage.tscn
+res://player/player.tscn
