@@ -1,0 +1,45 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<< HEAD:assets/Textures/PathRocks_Diffuse.png.import
+uid="uid://b1r2d37p3ikex"
+path.s3tc="res://.godot/imported/PathRocks_Diffuse.png-2171526682d6ac13be4807bc51804c9c.s3tc.ctex"
+=======
+uid="uid://x1ossm7h0h8b"
+path.s3tc="res://.godot/imported/PathRocks_Diffuse.png-8fdb87b8b5b362833be02d5a1eb28f34.s3tc.ctex"
+>>>>>>> d17fbb5ad8b568a1bea5affb9d281d67293f4fd0:assets2/Textures/PathRocks_Diffuse.png.import~RFf41d56e.TMP
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+<<<<<<< HEAD:assets/Textures/PathRocks_Diffuse.png.import
+source_file="res://assets/Textures/PathRocks_Diffuse.png"
+dest_files=["res://.godot/imported/PathRocks_Diffuse.png-2171526682d6ac13be4807bc51804c9c.s3tc.ctex"]
+=======
+source_file="res://assets2/Textures/PathRocks_Diffuse.png"
+dest_files=["res://.godot/imported/PathRocks_Diffuse.png-8fdb87b8b5b362833be02d5a1eb28f34.s3tc.ctex"]
+>>>>>>> d17fbb5ad8b568a1bea5affb9d281d67293f4fd0:assets2/Textures/PathRocks_Diffuse.png.import~RFf41d56e.TMP
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

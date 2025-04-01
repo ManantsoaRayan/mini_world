@@ -10,6 +10,7 @@ var prev_advance := false
 var dying := false
 var rot_dir = 4
 
+
 @onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") \
 		* ProjectSettings.get_setting("physics/3d/default_gravity_vector")
 

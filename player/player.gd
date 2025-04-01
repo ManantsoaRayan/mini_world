@@ -160,7 +160,7 @@ func _physics_process(delta):
 		if (shoot_blend < 0):
 			shoot_blend = 0
 
-	if shoot_attempt and not prev_shoot:
+	if shoot_attempt and not prev_shoot and coins > 0:
 		shoot_blend = SHOOT_TIME
 		var bullet := preload("res://player/bullet/bullet.tscn").instantiate() as Bullet
 		bullet.set_transform($Player/Skeleton/Bullet.get_global_transform().orthonormalized())
@@ -169,6 +169,7 @@ func _physics_process(delta):
 			$Player/Skeleton/Bullet.get_global_transform().basis[2].normalized() * BULLET_SPEED
 		)
 		bullet.add_collision_exception_with(self)
+		coins -= 1
 		$SoundShoot.play()
 
 	prev_shoot = shoot_attempt
