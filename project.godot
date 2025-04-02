@@ -155,3 +155,5 @@ textures/decals/filter=1
 anti_aliasing/quality/use_debanding=true
 lights_and_shadows/positional_shadow/atlas_size=512
 lights_and_shadows/positional_shadow/atlas_size.mobile=256
+environment/hdr_2d=false
+environment/transparent_background=false

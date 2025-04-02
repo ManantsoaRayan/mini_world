@@ -2,8 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD:assets/glTF/PathRocks_Diffuse.png.import
+uid="uid://db5t1srvaq34e"
+path.s3tc="res://.godot/imported/PathRocks_Diffuse.png-470aacf4cd0d957fdfbdf57f4cc924c7.s3tc.ctex"
+=======
 uid="uid://c5dbohtv5py6a"
 path.s3tc="res://.godot/imported/Bark_DeadTree.png-c589a218618fb36be283319780044519.s3tc.ctex"
+>>>>>>> d17fbb5ad8b568a1bea5affb9d281d67293f4fd0:assets2/Textures/Bark_DeadTree.png.import
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
