@@ -1,11 +1,28 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0lrpf3mmjdsx"]
+[gd_scene load_steps=28 format=3 uid="uid://d0lrpf3mmjdsx"]
 
 [ext_resource type="PackedScene" uid="uid://dohp772jyjxb7" path="res://stage/stage.tscn" id="1_ybvw5"]
 [ext_resource type="PackedScene" uid="uid://dfxo2jwbj4aeh" path="res://coin/coin.tscn" id="2_chew2"]
 [ext_resource type="PackedScene" uid="uid://dmlvwah3ypol0" path="res://stage/grid_map.scn" id="2_p3qm0"]
 [ext_resource type="PackedScene" uid="uid://o5q0hy6cg6nt" path="res://enemy/enemy.tscn" id="3_nhwvs"]
 [ext_resource type="ArrayMesh" uid="uid://ba7lhk44sk366" path="res://stage/meshes/floor.res" id="4_16ssl"]
+[ext_resource type="PackedScene" uid="uid://cgjokvaufp8wl" path="res://assets2/FBX/Bush_Common_Flowers.fbx" id="4_lc2xo"]
 [ext_resource type="PackedScene" uid="uid://cc4idhykjp5f5" path="res://player/player.tscn" id="4_ray4s"]
+[ext_resource type="PackedScene" uid="uid://d2s233ilhp56e" path="res://assets2/FBX/Clover_2.fbx" id="5_215e1"]
+[ext_resource type="PackedScene" uid="uid://bah6yx0kkn5sj" path="res://assets2/FBX/Flower_3_Group.fbx" id="6_7sc4i"]
+[ext_resource type="PackedScene" uid="uid://b85atcv8g1chg" path="res://assets2/FBX/Flower_4_Group.fbx" id="7_80cx4"]
+[ext_resource type="PackedScene" uid="uid://m6wivbergp8x" path="res://assets2/FBX/Bush_Common.fbx" id="8_e8heu"]
+[ext_resource type="PackedScene" uid="uid://cgt0v3swrwu0p" path="res://assets2/FBX/Plant_7.fbx" id="9_rvswv"]
+[ext_resource type="PackedScene" uid="uid://cp0w2f2k68ob" path="res://assets2/FBX/Fern_1.fbx" id="10_215e1"]
+[ext_resource type="PackedScene" uid="uid://bgr3flaj48i6y" path="res://assets2/FBX/Flower_3_Single.fbx" id="10_qhcbd"]
+[ext_resource type="PackedScene" uid="uid://dxcejas0mdin4" path="res://Asset/kenney_nature-kit/Models/GLTF format/plant_bushDetailed.glb" id="11_e8heu"]
+[ext_resource type="PackedScene" uid="uid://dcv62tdfurgp5" path="res://assets2/FBX/Flower_4_Single.fbx" id="11_f1jbl"]
+[ext_resource type="PackedScene" uid="uid://biot6orgrku0k" path="res://assets2/FBX/RockPath_Square_Wide.fbx" id="12_boyg6"]
+[ext_resource type="PackedScene" uid="uid://cp52viooakkbt" path="res://Asset/kenney_nature-kit/Models/GLTF format/plant_bush.glb" id="12_rvswv"]
+[ext_resource type="PackedScene" uid="uid://dkihhk2tcw3cl" path="res://assets2/FBX/Grass_Common_Short.fbx" id="12_vaj68"]
+[ext_resource type="PackedScene" uid="uid://bpdef2e6y4xus" path="res://Asset/kenney_nature-kit/Models/FBX format/flower_yellowA.fbx" id="13_boyg6"]
+[ext_resource type="PackedScene" uid="uid://3aagvoyvtnaj" path="res://assets2/FBX/Mushroom_Laetiporus.fbx" id="13_i2p71"]
+[ext_resource type="PackedScene" uid="uid://cx5gky0cgyqh6" path="res://assets2/FBX/Plant_1.fbx" id="14_xa8c5"]
+[ext_resource type="PackedScene" uid="uid://dtbeqthqk6vdp" path="res://assets2/FBX/Plant_1_Big.fbx" id="15_5b14r"]
 
 [sub_resource type="PhysicsMaterial" id="2"]
 friction = 0.0
@@ -127,6 +144,556 @@ modulate = Color(0.301961, 0.623529, 0.862745, 1)
 text = "You have found
 a secret area!"
 font_size = 48
+
+[node name="assets" type="Node3D" parent="Stage4"]
+
+[node name="Fleur" type="Node3D" parent="Stage4/assets"]
+
+[node name="Bush_Common_Flowers" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 4.99095, 5.70051, 8.79022)
+
+[node name="Bush_Common_Flowers5" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 7.19616, 7.61432, 8.88506)
+
+[node name="Bush_Common_Flowers6" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 7.19616, 7.61432, 8.88506)
+
+[node name="Bush_Common_Flowers7" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 54.8797, 1.4861, 8.49734)
+
+[node name="Bush_Common_Flowers10" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 54.972, -2.63338, 4.3195)
+
+[node name="Bush_Common_Flowers8" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 65.1621, 1.50951, 9.13042)
+
+[node name="Bush_Common_Flowers12" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 21.2086, 9.72612, 2.85167)
+
+[node name="Bush_Common_Flowers18" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 10.7302, 9.74593, -17.8972)
+
+[node name="Bush_Common_Flowers19" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 11.0153, 9.64669, -22.5235)
+
+[node name="Bush_Common_Flowers9" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 65.1272, -2.69206, 4.57095)
+
+[node name="Bush_Common_Flowers2" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 0.728294, 1.78395, 8.61158)
+
+[node name="Bush_Common_Flowers11" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 0.728294, 1.78395, 8.61158)
+
+[node name="Bush_Common_Flowers4" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, -1.88045, 1.884, 8.44868)
+
+[node name="Bush_Common_Flowers13" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614874, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 3.17369, -4.20935, -7.62205)
+
+[node name="Bush_Common_Flowers14" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614874, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 0.935257, -4.12349, -7.76182)
+
+[node name="Bush_Common_Flowers15" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997877, 5.58423, -4.30031, -7.39282)
+
+[node name="Bush_Common_Flowers3" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 2.8195, 3.82548, 8.69665)
+
+[node name="Clover_2" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -12.862, 4.11495, 2.03293)
+
+[node name="Clover_9" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -13.057, 4.07482, 3.59027)
+
+[node name="Clover_3" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -12.8428, 3.91952, 0.343681)
+
+[node name="Clover_4" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -12.7742, 3.96242, -1.47652)
+
+[node name="Clover_5" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -8.51111, 3.81696, -2.51298)
+
+[node name="Clover_6" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0399725, 0.0611843, 0.0382529, 0.998845, -0.0290244, -0.0622741, -0.0266064, -0.997704, -11.6453, 4.03922, -2.62346)
+
+[node name="Clover_7" parent="Stage4/assets/Fleur" instance=ExtResource("5_215e1")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -9.75836, 4.05637, -2.4437)
+
+[node name="Flower_3_Group" parent="Stage4/assets/Fleur" instance=ExtResource("6_7sc4i")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -1.18744, -0.0756178, -17.1521)
+
+[node name="Flower_3_Group3" parent="Stage4/assets/Fleur" instance=ExtResource("6_7sc4i")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 5.67031, -0.338652, -16.7239)
+
+[node name="Flower_3_Group2" parent="Stage4/assets/Fleur" instance=ExtResource("6_7sc4i")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 3.01537, -0.36141, -23.4422)
+
+[node name="Flower_4_Group" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 6.62839, -0.443923, -26.6521)
+
+[node name="Flower_4_Group2" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -4.78668, -2.15027, -17.0777)
+
+[node name="Flower_4_Group3" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -11.35, -0.0681286, -24.8636)
+
+[node name="Bush_Common" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -7.38776, -4.12567, 2.24098)
+
+[node name="Bush_Common10" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997324, 0.0395048, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.0622741, -0.0189961, -0.997877, 18.1662, 9.75512, -8.01734)
+
+[node name="Bush_Common2" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -10.3563, -4.01181, 2.05562)
+
+[node name="Bush_Common3" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -9.25097, -6.41558, 5.04559)
+
+[node name="Bush_Common4" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 54.7905, 3.35815, 10.6832)
+
+[node name="Bush_Common9" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 54.6165, 3.33715, 13.4568)
+
+[node name="Bush_Common7" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 54.9216, -0.583575, 6.51984)
+
+[node name="Bush_Common5" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.998534, 0.0395046, 0.0369454, 0.0387676, 0.999037, -0.0204582, -0.0377182, -0.0189961, -0.999106, 65.1048, 3.46671, 10.6091)
+
+[node name="Bush_Common8" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.998534, 0.0395046, 0.0369454, 0.0387676, 0.999037, -0.0204582, -0.0377181, -0.0189961, -0.999106, 64.9115, 3.39471, 13.6595)
+
+[node name="Bush_Common6" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.998534, 0.0395046, 0.0369454, 0.0387676, 0.999036, -0.0204582, -0.0377181, -0.0189961, -0.999106, 65.0349, -0.583524, 6.65804)
+
+[node name="Plant_7" parent="Stage4/assets/Fleur" instance=ExtResource("9_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 1.61211, -8.08499, 0.717377)
+
+[node name="Plant_11" parent="Stage4/assets/Fleur" instance=ExtResource("9_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 1.5124, -8.03728, 3.01881)
+
+[node name="Flower_3_Single" parent="Stage4/assets/Fleur" instance=ExtResource("10_qhcbd")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 13.2887, 9.514, 5.58889)
+
+[node name="Flower_4_Group4" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 21.2044, 9.74457, -6.06672)
+
+[node name="Flower_4_Single" parent="Stage4/assets/Fleur" instance=ExtResource("11_f1jbl")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 15.248, 9.57685, 2.88541)
+
+[node name="Grass_Common_Short" parent="Stage4/assets/Fleur" instance=ExtResource("12_vaj68")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 10.245, 10.0105, 0.1968)
+
+[node name="Mushroom_Laetiporus" parent="Stage4/assets/Fleur" instance=ExtResource("13_i2p71")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 11.6874, 10.011, -0.373528)
+
+[node name="Plant_1" parent="Stage4/assets/Fleur" instance=ExtResource("14_xa8c5")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 20.5076, 9.29834, -16.93)
+
+[node name="Plant_1_Big" parent="Stage4/assets/Fleur" instance=ExtResource("15_5b14r")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 21.1408, 9.69537, -11.3511)
+
+[node name="Plant_12" parent="Stage4/assets/Fleur" instance=ExtResource("9_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 10.5095, 10.1173, -9.39121)
+
+[node name="Plant_10" parent="Stage4/assets/Fleur" instance=ExtResource("9_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 1.82219, -8.13446, -1.44744)
+
+[node name="Plant_8" parent="Stage4/assets/Fleur" instance=ExtResource("9_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 4.27028, -8.18694, 0.883354)
+
+[node name="Plant_9" parent="Stage4/assets/Fleur" instance=ExtResource("9_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -0.943237, -7.98697, 0.557816)
+
+[node name="Fern_1" parent="Stage4/assets/Fleur" instance=ExtResource("10_215e1")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 49.0878, -4.88531, 3.43344)
+
+[node name="Fern_4" parent="Stage4/assets/Fleur" instance=ExtResource("10_215e1")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 30.9515, 7.49126, -0.519928)
+
+[node name="Fern_2" parent="Stage4/assets/Fleur" instance=ExtResource("10_215e1")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 47.4491, -0.572631, 16.2675)
+
+[node name="Fern_3" parent="Stage4/assets/Fleur" instance=ExtResource("10_215e1")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -26.3625, 3.66909, -19.4376)
+
+[node name="plant_bushDetailed2" parent="Stage4/assets/Fleur" instance=ExtResource("11_e8heu")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 17.1348, 9.90583, -16.891)
+
+[node name="plant_bush2" parent="Stage4/assets/Fleur" instance=ExtResource("12_rvswv")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 17.4649, 2.69855, -10.7472)
+
+[node name="plant_bushDetailed3" parent="Stage4/assets/Fleur" instance=ExtResource("11_e8heu")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 20.966, 9.74053, -13.4166)
+
+[node name="flower_yellowA" parent="Stage4/assets/Fleur" instance=ExtResource("13_boyg6")]
+transform = Transform3D(-4.98663, 0.197524, 0.307437, 0.191265, 4.99519, -0.107027, -0.31137, -0.0949804, -4.98939, 16.858, 10.0699, -12.1918)
+
+[node name="Flower_4_Group5" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, -14.0458, 8.09178, -11.9798)
+
+[node name="Flower_4_Group6" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0318214, 0.0657931, 0.0382529, 0.994359, 0.0989272, -0.0622741, 0.101179, -0.992917, -14.0403, 8.09746, -10.88)
+
+[node name="Flower_4_Group7" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0318214, 0.0657931, 0.0382529, 0.994359, 0.0989272, -0.0622741, 0.101179, -0.992917, -13.8821, 8.04236, -13.4489)
+
+[node name="Flower_4_Group8" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0318214, 0.0657931, 0.0382529, 0.994359, 0.0989272, -0.0622741, 0.101179, -0.992917, -13.7977, 8.01299, -14.8177)
+
+[node name="Flower_3_Single2" parent="Stage4/assets/Fleur" instance=ExtResource("10_qhcbd")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -1.22353, -6.17017, -9.41151)
+
+[node name="Flower_3_Single3" parent="Stage4/assets/Fleur" instance=ExtResource("10_qhcbd")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -4.43277, -6.04707, -9.6119)
+
+[node name="Flower_3_Single4" parent="Stage4/assets/Fleur" instance=ExtResource("10_qhcbd")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -5.10785, -4.19282, -4.00555)
+
+[node name="Bush_Common_Flowers16" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 10.9069, 7.87138, 18.7052)
+
+[node name="Bush_Common_Flowers17" parent="Stage4/assets/Fleur" instance=ExtResource("4_lc2xo")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 21.7541, 7.44732, 18.961)
+
+[node name="Bush_Common11" parent="Stage4/assets/Fleur" instance=ExtResource("8_e8heu")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 16.3782, 7.79076, 18.8105)
+
+[node name="Flower_4_Group9" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 32.388, -0.28792, -9.21724)
+
+[node name="Flower_4_Group10" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 27.2762, -0.0918527, -9.53643)
+
+[node name="Flower_4_Group11" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 38.0796, -0.506223, -8.86185)
+
+[node name="Flower_3_Group4" parent="Stage4/assets/Fleur" instance=ExtResource("6_7sc4i")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 26.4682, 3.82113, 19.6653)
+
+[node name="Flower_3_Group5" parent="Stage4/assets/Fleur" instance=ExtResource("6_7sc4i")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 30.8894, 3.65155, 19.9414)
+
+[node name="Flower_4_Group12" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 52.5794, 3.48459, 24.4553)
+
+[node name="Flower_4_Group13" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 46.4391, 3.72946, 24.2413)
+
+[node name="Flower_4_Group14" parent="Stage4/assets/Fleur" instance=ExtResource("7_80cx4")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999039, -0.0214053, -0.0622741, -0.0189961, -0.997878, 40.5316, 3.72814, 23.8777)
+
+[node name="coin" type="Node3D" parent="Stage4/assets"]
+
+[node name="Coin" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 0.0715485, -0.230046, -14.6563)
+
+[node name="Coin9" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -2.22537, -2.26765, -14.7541)
+
+[node name="Coin10" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -3.16128, -2.23176, -14.8126)
+
+[node name="Coin11" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 0.80442, -4.15987, -6.66684)
+
+[node name="Coin12" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 2.11, -4.20994, -6.58532)
+
+[node name="Coin13" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 38.9809, 1.58292, -4.43768)
+
+[node name="Coin14" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 39.0959, 1.54288, -6.30403)
+
+[node name="Coin17" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.99601, -0.0646476, 0.0614874, -0.0660711, 0.997584, -0.0214053, -0.0599552, -0.0253826, -0.997877, 35.8489, 1.65315, -7.25711)
+
+[node name="Coin18" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.99601, -0.0646476, 0.0614874, -0.0660711, 0.997584, -0.0214053, -0.0599552, -0.0253826, -0.997877, 31.5123, 1.81949, -7.5279)
+
+[node name="Coin19" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.99601, -0.0646476, 0.0614874, -0.0660711, 0.997584, -0.0214053, -0.0599552, -0.0253826, -0.997877, 31.5123, 1.81949, -7.5279)
+
+[node name="Coin20" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.06936, 0.139465, -0.963886, -0.226868, -0.038078, -0.234158, 0.97145, 54.0122, -2.61609, -7.12018)
+
+[node name="Coin23" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.0693599, 0.139465, -0.963885, -0.226868, -0.0380779, -0.234158, 0.97145, 48.7252, -7.50371, 8.16541)
+
+[node name="Coin24" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.0693599, 0.139465, -0.963885, -0.226868, -0.0380779, -0.234158, 0.97145, 48.5154, -7.43067, 11.5703)
+
+[node name="Coin25" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.0693599, 0.139465, -0.963885, -0.226868, -0.0380779, -0.234158, 0.97145, 42.9673, -7.21787, 11.2239)
+
+[node name="Coin27" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985688, 0.0563301, -0.993509, 0.0987848, -0.988177, -0.0696078, -0.136578, 27.3493, -3.57699, 12.5652)
+
+[node name="Coin28" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985688, 0.0563301, -0.993509, 0.0987848, -0.988177, -0.0696078, -0.136578, 23.7933, -3.4406, 12.3432)
+
+[node name="Coin29" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985688, 0.0563301, -0.993509, 0.0987848, -0.988177, -0.0696078, -0.136578, 16.3136, -3.15371, 11.8761)
+
+[node name="Coin30" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985688, 0.0563301, -0.993509, 0.0987848, -0.988177, -0.0696078, -0.136578, 12.4141, -3.00414, 11.6326)
+
+[node name="Coin31" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985688, 0.05633, -0.993508, 0.0987847, -0.988177, -0.0696078, -0.136578, 18.5729, 10.6223, -3.17162)
+
+[node name="Coin32" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985688, 0.05633, -0.993508, 0.0987847, -0.988177, -0.0696078, -0.136578, 14.8802, 10.7639, -3.40221)
+
+[node name="Coin33" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985687, 0.05633, -0.993508, 0.0987847, -0.988176, -0.0696078, -0.136578, 15.0646, 10.6997, -6.39585)
+
+[node name="Coin34" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985687, 0.05633, -0.993508, 0.0987847, -0.988176, -0.0696078, -0.136578, 18.147, 10.5814, -6.20339)
+
+[node name="Coin35" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985687, 0.05633, -0.993508, 0.0987847, -0.988176, -0.0696078, -0.136578, 18.147, 10.5814, -6.20339)
+
+[node name="Coin36" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985687, 0.05633, -0.993508, 0.0987846, -0.988176, -0.0696077, -0.136578, 31.5767, 8.73279, -4.7813)
+
+[node name="Coin37" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899238, -0.985687, 0.05633, -0.993508, 0.0987846, -0.988176, -0.0696077, -0.136578, 29.352, 8.81811, -4.92022)
+
+[node name="Coin38" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(0.142568, -0.0899237, -0.985687, 0.05633, -0.993508, 0.0987846, -0.988176, -0.0696077, -0.136578, 26.2643, 8.93654, -5.11303)
+
+[node name="Coin26" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.0693599, 0.139465, -0.963884, -0.226868, -0.0380779, -0.234158, 0.971449, 43.2176, -7.30499, 7.16251)
+
+[node name="Coin21" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.06936, 0.139465, -0.963885, -0.226868, -0.038078, -0.234158, 0.97145, 55.5415, -2.67475, -7.0247)
+
+[node name="Coin22" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.989492, -0.126845, -0.06936, 0.139465, -0.963885, -0.226868, -0.0380779, -0.234158, 0.97145, 57.12, -2.73529, -6.92613)
+
+[node name="Coin15" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 38.8439, 1.63059, -2.21531)
+
+[node name="Coin16" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, 38.6798, 1.68774, 0.449081)
+
+[node name="Coin7" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0412883, 0.0603043, 0.0382529, 0.997983, -0.0506504, -0.0622741, -0.0482082, -0.996894, 0.126507, -0.249183, -15.5484)
+
+[node name="Coin2" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 1.34866, -0.279031, -14.5766)
+
+[node name="Coin6" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 1.40507, -0.298669, -15.492)
+
+[node name="Coin3" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 2.50051, -0.323211, -14.5046)
+
+[node name="Coin8" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 2.5577, -0.343126, -15.433)
+
+[node name="Coin4" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 3.70589, -0.369445, -14.4294)
+
+[node name="Coin5" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395048, 0.0614875, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, 3.76301, -0.38933, -15.3564)
+
+[node name="Coin39" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -31.4341, 4.66594, -28.7035)
+
+[node name="Coin40" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -28.2797, 4.54495, -28.5066)
+
+[node name="Coin41" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997325, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.0622741, -0.0189961, -0.997878, -28.4603, 4.60781, -25.5763)
+
+[node name="Coin42" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999038, -0.0214053, -0.062274, -0.0189961, -0.997878, -31.8601, 4.73821, -25.7885)
+
+[node name="Coin43" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395047, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -20.9738, 2.34873, -4.38564)
+
+[node name="Coin44" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -20.8167, 2.29404, -6.93505)
+
+[node name="Coin51" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -18.3779, 8.52416, 8.97874)
+
+[node name="Coin52" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -15.6832, 8.4208, 9.147)
+
+[node name="Coin56" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382528, 0.999036, -0.0214053, -0.062274, -0.0189961, -0.997876, -4.57191, 8.10776, 19.1325)
+
+[node name="Coin57" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382528, 0.999036, -0.0214053, -0.062274, -0.0189961, -0.997876, 4.68879, 7.97744, 19.7059)
+
+[node name="Coin58" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382528, 0.999036, -0.0214053, -0.062274, -0.0189961, -0.997876, 11.8852, 8.13554, 20.1459)
+
+[node name="Coin59" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382528, 0.999036, -0.0214053, -0.062274, -0.0189961, -0.997876, 17.6719, 7.93259, 20.5068)
+
+[node name="Coin53" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -15.5637, 8.37921, 7.20818)
+
+[node name="Coin54" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -15.4747, 8.34822, 5.76377)
+
+[node name="Coin55" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -18.671, 8.47082, 5.56418)
+
+[node name="Coin45" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -21.2929, 0.362793, -0.495026)
+
+[node name="Coin46" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -21.7383, 0.517845, 6.73322)
+
+[node name="Coin47" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -21.9683, 0.597919, 10.4662)
+
+[node name="Coin48" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997324, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -21.481, 2.86889, 4.05669)
+
+[node name="Coin49" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -21.3853, 2.83557, 2.50327)
+
+[node name="Coin50" parent="Stage4/assets/coin" instance=ExtResource("2_chew2")]
+transform = Transform3D(-0.997323, 0.0395046, 0.0614874, 0.0382529, 0.999037, -0.0214053, -0.062274, -0.0189961, -0.997877, -21.3853, 2.83557, 2.50327)
+
+[node name="ennemy" type="Node3D" parent="Stage4/assets"]
+
+[node name="Enemy" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.0599731, 0.0395049, 0.997418, -0.0213472, 0.999038, -0.0382854, -0.997971, -0.018996, 0.0607587, -5.79069, -3.8762, -0.178131)
+
+[node name="Enemy2" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.986173, 0.0395048, 0.160928, -0.0420437, 0.999038, 0.0124014, -0.160283, -0.0189959, 0.986888, 3.30143, 0.60325, -18.9084)
+
+[node name="Enemy3" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.983431, 0.0395047, 0.176913, -0.0422395, 0.999038, 0.0117174, -0.176279, -0.0189959, 0.984156, -5.34, 2.25127, -24.5883)
+
+[node name="Enemy4" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.116805, 0.0395048, 0.992368, -0.0142633, 0.999037, -0.0414491, -0.99305, -0.018996, -0.11613, -7.62345, 8.38102, 15.7468)
+
+[node name="Enemy6" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.116805, 0.0395048, 0.992368, -0.0142633, 0.999037, -0.0414491, -0.99305, -0.018996, -0.11613, -14.632, 10.9759, -17.0904)
+
+[node name="Enemy18" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.116805, 0.0395048, 0.992368, -0.0142633, 0.999037, -0.0414491, -0.993049, -0.018996, -0.11613, -31.9109, 4.91375, -18.0251)
+
+[node name="Enemy19" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.116805, 0.0395047, 0.992367, -0.0142633, 0.999037, -0.0414491, -0.993049, -0.018996, -0.11613, -24.4471, 4.44439, -27.1877)
+
+[node name="Enemy7" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.622641, 0.0395047, 0.781507, 0.00974338, 0.999037, -0.042738, -0.782443, -0.018996, -0.622429, 13.9014, 11.985, -15.3539)
+
+[node name="Enemy8" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.562464, 0.0395047, 0.825875, -0.0379462, 0.999037, -0.0219443, -0.825946, -0.018996, 0.563423, 13.0654, 12.2761, -1.78738)
+
+[node name="Enemy9" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.988018, 0.0395047, -0.149176, -0.0362167, 0.999037, 0.0246945, 0.150008, -0.0189959, 0.988501, 34.8926, 8.94622, -0.370995)
+
+[node name="Enemy14" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.988017, 0.0395047, -0.149176, -0.0362167, 0.999037, 0.0246945, 0.150008, -0.0189959, 0.9885, 35.304, -2.14676, -13.7736)
+
+[node name="Enemy15" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.988017, 0.0395047, -0.149176, -0.0362167, 0.999037, 0.0246945, 0.150008, -0.0189959, 0.9885, 55.6095, -2.92558, -12.5057)
+
+[node name="Enemy10" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.11715, 0.0395047, -0.992326, 0.0235104, 0.999037, 0.0369963, 0.992832, -0.018996, -0.117966, 56.5055, -2.86033, 1.21398)
+
+[node name="Enemy16" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.11715, 0.0395046, -0.992325, 0.0235104, 0.999036, 0.0369963, 0.992831, -0.018996, -0.117966, 57.1739, 4.02319, 16.8929)
+
+[node name="Enemy17" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.11715, 0.0395046, -0.992325, 0.0235104, 0.999036, 0.0369963, 0.992831, -0.018996, -0.117966, 47.5079, 4.39393, 16.2894)
+
+[node name="Enemy11" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.97829, 0.0395047, 0.203413, 0.0348003, 0.999036, -0.0266533, -0.20427, -0.018996, -0.978726, 42.2713, -2.14348, 13.814)
+
+[node name="Enemy12" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.0910819, 0.0395047, 0.995055, -0.0225319, 0.999036, -0.0376001, -0.995583, -0.0189959, 0.0918844, 19.1796, -3.30534, 12.0054)
+
+[node name="Enemy13" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(0.0910819, 0.0395047, 0.995055, -0.0225319, 0.999036, -0.0376001, -0.995582, -0.0189959, 0.0918844, 30.1529, -5.66224, 13.4382)
+
+[node name="Enemy20" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.0126442, 0.0395048, 0.999139, -0.0185095, 0.999039, -0.039735, -0.999749, -0.0189961, -0.0119007, 7.95229, -2.01799, -2.07973)
+
+[node name="Enemy5" parent="Stage4/assets/ennemy" instance=ExtResource("3_nhwvs")]
+transform = Transform3D(-0.998875, 0.0395047, 0.0261207, 0.0389871, 0.999037, -0.0200368, -0.0268874, -0.018996, -0.999457, 6.10448, 7.85447, 16.604)
+
+[node name="pierre" type="Node3D" parent="Stage4/assets"]
+
+[node name="RockPath_Square_Wide" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999219, 0.0395048, 1.66371e-05, 0.0394973, 0.999039, -0.0190115, -0.000767808, -0.0189961, -0.999819, 60.203, -2.52353, 5.01748)
+
+[node name="RockPath_Square_Wide2" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999173, 0.0395048, 0.00957343, 0.0393137, 0.999038, -0.0193884, -0.0103303, -0.0189961, -0.999766, 60.1574, -0.513633, 6.98251)
+
+[node name="RockPath_Square_Wide3" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999219, 0.0395048, 0.000470065, 0.0394887, 0.999038, -0.0190294, -0.00122151, -0.0189961, -0.999819, 60.1152, 1.53374, 8.91644)
+
+[node name="RockPath_Square_Wide4" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999023, 0.0412098, -0.0159325, 0.0415115, 0.998955, -0.0190947, 0.0151288, -0.0197375, -0.999691, 60.0143, 3.52954, 10.9388)
+
+[node name="RockPath_Square_Wide5" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999075, 0.04123, 0.0121967, 0.0409784, 0.998955, -0.0202076, -0.0130173, -0.0196891, -0.999721, 57.8814, 3.6137, 10.9294)
+
+[node name="RockPath_Square_Wide2" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 69.8045, 2.07739, 26.4732)
+
+[node name="RockPath_Square_Wide3" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 71.9251, 1.98263, 26.4289)
+
+[node name="RockPath_Square_Wide4" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 74.0759, 1.88081, 26.384)
+
+[node name="RockPath_Square_Wide5" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 74.0332, 1.84373, 24.3405)
+
+[node name="RockPath_Square_Wide6" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 73.9885, 1.88502, 22.2)
+
+[node name="RockPath_Square_Wide7" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 73.9436, 1.8272, 20.0589)
+
+[node name="RockPath_Square_Wide8" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 73.8979, 1.76572, 17.8777)
+
+[node name="RockPath_Square_Wide9" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 71.7696, 1.84419, 17.9222)
+
+[node name="RockPath_Square_Wide10" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 69.6834, 1.89383, 17.9658)
+
+[node name="RockPath_Square_Wide11" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 69.7287, 1.97513, 20.1225)
+
+[node name="RockPath_Square_Wide12" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 69.7729, 2.05606, 22.232)
+
+[node name="RockPath_Square_Wide13" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 69.8185, 2.0759, 24.411)
+
+[node name="RockPath_Square_Wide14" parent="Stage4/assets/pierre/RockPath_Square_Wide5" instance=ExtResource("12_boyg6")]
+transform = Transform3D(0.99978, 0.001718, 0.0209096, -0.00173262, 0.999999, 0.000679572, -0.0209084, -0.00071556, 0.999781, 69.8185, 2.0759, 24.411)
+
+[node name="RockPath_Square_Wide6" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999149, 0.0412217, 0.000303179, 0.0412076, 0.998955, -0.0197389, -0.00111669, -0.0197096, -0.999805, 62.058, 3.44977, 10.9936)
+
+[node name="RockPath_Square_Wide7" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999147, 0.0412197, -0.00231276, 0.0412573, 0.998955, -0.0196354, 0.00150083, -0.0197142, -0.999804, 62.0027, 3.49038, 13.0142)
+
+[node name="RockPath_Square_Wide10" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999055, 0.0412114, -0.0137004, 0.0414703, 0.998954, -0.0191835, 0.0128953, -0.0197337, -0.999721, 57.9237, 3.59151, 12.9526)
+
+[node name="RockPath_Square_Wide11" parent="Stage4/assets/pierre" instance=ExtResource("12_boyg6")]
+transform = Transform3D(-0.999055, 0.0412114, -0.0137005, 0.0414703, 0.998955, -0.0191835, 0.0128954, -0.0197337, -0.999721, 59.9479, 3.57077, 12.9694)
 
 [node name="Coins" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -6, -12)
@@ -271,9 +838,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0614, 8.20515, 15.0836)
 
 [node name="Coin72" parent="Coins" instance=ExtResource("2_chew2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1614, 11.1052, 13.1836)
-
-[node name="Coin73" parent="Coins" instance=ExtResource("2_chew2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7614, 11.1052, 16.7836)
 
 [node name="Coin71" parent="Coins" instance=ExtResource("2_chew2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.0614, 10.2052, 11.0836)
