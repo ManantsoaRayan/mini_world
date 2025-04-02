@@ -20,6 +20,7 @@ const AIR_ACCEL_FACTOR = 0.5
 const SHARP_TURN_THRESHOLD = deg_to_rad(140.0)
 
 var movement_dir := Vector3()
+var double_jump := false
 var jumping := false
 var prev_shoot := false
 var shoot_blend := 0.0
@@ -70,6 +71,8 @@ func _physics_process(delta):
 	var shoot_attempt := Input.is_action_pressed(&"shoot")
 
 	if is_on_floor():
+		# when player touch the ground, he regain the double_jump capacity 
+		double_jump = true
 		var sharp_turn := horizontal_speed > 0.1 and \
 				acos(movement_direction.dot(horizontal_direction)) > SHARP_TURN_THRESHOLD
 
@@ -107,9 +110,9 @@ func _physics_process(delta):
 				Vector3.UP
 			)
 		var m3 := Basis(
-			-facing_mesh,
+			- facing_mesh,
 			Vector3.UP,
-			-facing_mesh.cross(Vector3.UP).normalized()
+			- facing_mesh.cross(Vector3.UP).normalized()
 		).scaled(CHAR_SCALE)
 
 		$Player/Skeleton.set_transform(Transform3D(m3, mesh_xform.origin))
@@ -131,6 +134,12 @@ func _physics_process(delta):
 			if horizontal_speed < 0:
 				horizontal_speed = 0
 			horizontal_velocity = horizontal_direction * horizontal_speed
+
+		if double_jump and Input.is_action_just_pressed("jump"):
+			vertical_velocity = JUMP_VELOCITY
+			double_jump = false
+			jumping = true
+			$SoundJump.play()
 
 		if Input.is_action_just_released("jump") and velocity.y > 0.0:
 			# Reduce jump height if releasing the jump key before reaching the apex.
@@ -185,7 +194,7 @@ func adjust_facing(facing: Vector3, target: Vector3, step: float, adjust_rate: f
 	var x := normal.dot(facing)
 	var y := t.dot(facing)
 
-	var ang := atan2(y,x)
+	var ang := atan2(y, x)
 
 	if absf(ang) < 0.001:
 		return facing
