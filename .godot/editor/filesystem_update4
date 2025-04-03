@@ -1,2 +1,5 @@
 res://game.tscn
 res://player/player_glow.tres
+res://Assets_collisions/Hazo_hab2.tscn
+res://player/player.tscn
+res://Assets_collisions/Vato.tscn

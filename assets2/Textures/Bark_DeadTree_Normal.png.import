@@ -2,39 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:assets/Textures/Bark_DeadTree_Normal.png.import
-uid="uid://8nrth6kh7db"
-path.s3tc="res://.godot/imported/Bark_DeadTree_Normal.png-f0793395afef5e4c804a8de7afc922a1.s3tc.ctex"
-=======
-uid="uid://c42ui6dckrm17"
-path.s3tc="res://.godot/imported/Bark_DeadTree_Normal.png-5989370bac5176dfdecfacc003fe54a1.s3tc.ctex"
->>>>>>> d17fbb5ad8b568a1bea5affb9d281d67293f4fd0:assets2/Textures/Bark_DeadTree_Normal.png.import
+uid="uid://d4hksjmcwrk8g"
+path="res://.godot/imported/Bark_DeadTree_Normal.png-5989370bac5176dfdecfacc003fe54a1.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets2/Textures/Bark_DeadTree_Normal.png"
-dest_files=["res://.godot/imported/Bark_DeadTree_Normal.png-5989370bac5176dfdecfacc003fe54a1.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bark_DeadTree_Normal.png-5989370bac5176dfdecfacc003fe54a1.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://assets/textures/Bark_DeadTree_Normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

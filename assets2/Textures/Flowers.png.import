@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:assets/Textures/Flowers.png.import
-uid="uid://p4e0hr7odihp"
-path.s3tc="res://.godot/imported/Flowers.png-5ed77a21073fb0f9b877a1b39dd6d1bf.s3tc.ctex"
-=======
-uid="uid://bc1sxb0u0mr2s"
-path.s3tc="res://.godot/imported/Flowers.png-03a58cea22d980ebc19fceaace7ab315.s3tc.ctex"
->>>>>>> d17fbb5ad8b568a1bea5affb9d281d67293f4fd0:assets2/Textures/Flowers.png.import
+uid="uid://dis0bwaynteni"
+path.s3tc="res://.godot/imported/Flowers.png-1b7ec2be3b6c2af0d37676431369393f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -16,13 +11,8 @@ metadata={
 
 [deps]
 
-<<<<<<< HEAD:assets/Textures/Flowers.png.import
-source_file="res://assets/textures/Flowers.png"
-dest_files=["res://.godot/imported/Flowers.png-5ed77a21073fb0f9b877a1b39dd6d1bf.s3tc.ctex"]
-=======
-source_file="res://assets2/Textures/Flowers.png"
-dest_files=["res://.godot/imported/Flowers.png-03a58cea22d980ebc19fceaace7ab315.s3tc.ctex"]
->>>>>>> d17fbb5ad8b568a1bea5affb9d281d67293f4fd0:assets2/Textures/Flowers.png.import
+source_file="res://assets2/textures/Flowers.png"
+dest_files=["res://.godot/imported/Flowers.png-1b7ec2be3b6c2af0d37676431369393f.s3tc.ctex"]
 
 [params]
 
