@@ -1,2 +1,6 @@
+res://player/player.gd
 res://game.tscn
 res://player/player_glow.tres
+res://Assets_collisions/Arbre_rouge.tscn
+res://Assets_collisions/bridge_center.tscn
+res://player/player.tscn

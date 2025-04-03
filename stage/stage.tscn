@@ -36,7 +36,7 @@ metadata/_editor_floor_ = Vector3(47, 5, 0)
 environment = SubResource("Environment_vpofs")
 
 [node name="DirectionalLight" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.965926, -0.166366, 0.198267, 1.42109e-14, 0.766044, 0.642788, -0.258819, 0.620886, -0.739941, 0, 0, 0)
+transform = Transform3D(-0.916297, -0.391582, 0.0840446, 0.164805, -0.1774, 0.970242, -0.36502, 0.902881, 0.227085, 0, 0, 0)
 shadow_enabled = true
 shadow_bias = 0.02
 shadow_blur = 1.5
