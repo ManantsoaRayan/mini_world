@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dp87vxho7mv02"
+=======
+uid="uid://dpglapnt1rogj"
+>>>>>>> abec8c0447dc84c5cba01a299ea13ebfdc0b79bb
 path="res://.godot/imported/Bark_DeadTree.png-c589a218618fb36be283319780044519.ctex"
 metadata={
 "vram_texture": false

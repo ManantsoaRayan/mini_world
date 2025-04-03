@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://djifjgdojdp24"
+=======
+uid="uid://dg2wja0qa8l5j"
+>>>>>>> abec8c0447dc84c5cba01a299ea13ebfdc0b79bb
 path.s3tc="res://.godot/imported/Leaves.png-329b29a81535645041097c90c9c11823.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],

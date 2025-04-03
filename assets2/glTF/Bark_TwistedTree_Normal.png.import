@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cm74unn31aswm"
+=======
+uid="uid://oxbh7enskjff"
+>>>>>>> abec8c0447dc84c5cba01a299ea13ebfdc0b79bb
 path.s3tc="res://.godot/imported/Bark_TwistedTree_Normal.png-f7258bf10ae91d669d477e11fb01a5ef.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
