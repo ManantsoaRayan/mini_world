@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://g603d8yj6xc0"]
+
+[ext_resource type="Script" uid="uid://cp437n3hywebo" path="res://launcher.gd" id="1_4emaf"]
+
+[sub_resource type="SystemFont" id="SystemFont_iex1j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4emaf"]
+font = SubResource("SystemFont_iex1j")
+font_size = 43
+outline_size = 4
+
+[node name="Launcher" type="Node2D"]
+script = ExtResource("1_4emaf")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 84.0
+offset_right = 927.0
+offset_bottom = 151.0
+text = "Welcome to BEESCAPE  World"
+label_settings = SubResource("LabelSettings_4emaf")
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 220.0
+offset_right = 693.0
+offset_bottom = 293.0
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 332.0
+offset_right = 693.0
+offset_bottom = 405.0
+text = "QUIT"
+
+[node name="Label2" type="Label" parent="Control"]
+offset_left = -3.0
+offset_top = 590.0
+offset_right = 175.0
+offset_bottom = 641.0
+text = "made by HiveCode"
+
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

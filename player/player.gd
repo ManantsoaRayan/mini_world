@@ -26,28 +26,42 @@ var prev_shoot := false
 var shoot_blend := 0.0
 
 # Number of coins collected.
-var coins := 0
 
 @onready var initial_position := position
 @onready var gravity: Vector3 = ProjectSettings.get_setting("physics/3d/default_gravity") * \
 		ProjectSettings.get_setting("physics/3d/default_gravity_vector")
 
-@onready var _camera := $Target/Camera3D as Camera3D
+@onready var _camera := $Head/Camera3D as Camera3D
 @onready var _animation_tree := $AnimationTree as AnimationTree
 
 func _physics_process(delta):
-	if Input.is_action_pressed("reset_position") or global_position.y < -12:
+	if global_position.y < -12:
 		# Player hit the reset button or fell off the map.
 		position = initial_position
+		Global.life -= 1
 		velocity = Vector3.ZERO
+		if Global.life == Global.GAME_OVER_LIFE:
+			get_tree().change_scene_to_file("res://game_over_view.tscn")
 
 	# Update coin count and its "parallax" copies.
 	# This gives text a pseudo-3D appearance while still using Label3D instead of the more limited TextMesh.
-	%CoinCount.text = str(coins)
-	%CoinCount.get_node("Parallax").text = str(coins)
-	%CoinCount.get_node("Parallax2").text = str(coins)
-	%CoinCount.get_node("Parallax3").text = str(coins)
-	%CoinCount.get_node("Parallax4").text = str(coins)
+	%CoinCount.text = str(Global.coins)
+	%CoinCount.get_node("Parallax").text = str(Global.coins)
+	%CoinCount.get_node("Parallax2").text = str(Global.coins)
+	%CoinCount.get_node("Parallax3").text = str(Global.coins)
+	%CoinCount.get_node("Parallax4").text = str(Global.coins)
+
+	%LifeCount.text = str(Global.life)
+	%LifeCount.get_node("Parallax").text = str(Global.life)
+	%LifeCount.get_node("Parallax2").text = str(Global.life)
+	%LifeCount.get_node("Parallax3").text = str(Global.life)
+	%LifeCount.get_node("Parallax4").text = str(Global.life)
+
+	%EnemyCount.text = str(Global.enemy_count)
+	%EnemyCount.get_node("Parallax").text = str(Global.enemy_count)
+	%EnemyCount.get_node("Parallax2").text = str(Global.enemy_count)
+	%EnemyCount.get_node("Parallax3").text = str(Global.enemy_count)
+	%EnemyCount.get_node("Parallax4").text = str(Global.enemy_count)
 
 	velocity += gravity * delta
 
@@ -159,7 +173,7 @@ func _physics_process(delta):
 		if (shoot_blend < 0):
 			shoot_blend = 0
 
-	if shoot_attempt and not prev_shoot and coins > 0:
+	if shoot_attempt and not prev_shoot and Global.coins > 0:
 		shoot_blend = SHOOT_TIME
 		var bullet := preload("res://player/bullet/bullet.tscn").instantiate() as Bullet
 		bullet.set_transform($Player/Skeleton/Bullet.get_global_transform().orthonormalized())
@@ -168,7 +182,7 @@ func _physics_process(delta):
 			$Player/Skeleton/Bullet.get_global_transform().basis[2].normalized() * BULLET_SPEED
 		)
 		bullet.add_collision_exception_with(self)
-		coins -= 1
+		Global.coins -= 1
 		$SoundShoot.play()
 
 	prev_shoot = shoot_attempt

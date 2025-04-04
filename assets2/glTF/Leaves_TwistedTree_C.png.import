@@ -2,11 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://cuo6tqmjx1ylp"
-=======
-uid="uid://dnkmoesgjvh6g"
->>>>>>> abec8c0447dc84c5cba01a299ea13ebfdc0b79bb
+uid="uid://cacaqh88m1myi"
 path.s3tc="res://.godot/imported/Leaves_TwistedTree_C.png-db099da1ed7139ed37d6f9a63065d2fa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],

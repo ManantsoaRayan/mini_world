@@ -10,13 +10,16 @@ config_version=5
 
 [application]
 
-config/name="Platformer 3D Demo"
-config/description="Platformer 3D demo using a CharacterBody3D.
-It uses similar code to the 2D platformer, but implemented in 3D."
-config/tags=PackedStringArray("3d", "demo", "gridmap", "official", "physics")
-run/main_scene="res://game.tscn"
+config/name="Mini_World"
+config/description="Platform games"
+config/tags=PackedStringArray("3d", "demo", "gridmap", "physics")
+run/main_scene="uid://g603d8yj6xc0"
 config/features=PackedStringArray("4.4")
 config/icon="res://icon.webp"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [dotnet]
 

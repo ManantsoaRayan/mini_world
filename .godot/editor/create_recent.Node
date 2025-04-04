@@ -1,6 +1,9 @@
-StaticBody3D
+Label
+Button
+Control
+Camera3D
 Node3D
+StaticBody3D
 CollisionShape3D
 CollisionPolygon3D
 RigidBody3D
-Camera3D
