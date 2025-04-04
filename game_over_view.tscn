@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2wtfni23nngy"]
+
+[ext_resource type="Script" uid="uid://gt4fd7cay6f" path="res://game_over_view.gd" id="1_1snnu"]
+
+[sub_resource type="SystemFont" id="SystemFont_36m7i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1snnu"]
+line_spacing = 2.0
+paragraph_spacing = 21.0
+font = SubResource("SystemFont_36m7i")
+font_size = 74
+font_color = Color(0.352941, 0.0117647, 0, 0.956863)
+outline_size = 9
+shadow_size = 19
+
+[sub_resource type="GDScript" id="GDScript_1snnu"]
+script/source = "extends Button
+"
+
+[node name="GameOverView" type="Node2D"]
+script = ExtResource("1_1snnu")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 645.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 104.0
+offset_right = 991.0
+offset_bottom = 206.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_1snnu")
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Restart" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 370.0
+offset_right = 911.0
+offset_bottom = 425.0
+action_mode = 0
+text = "Restart"
+script = SubResource("GDScript_1snnu")
+
+[node name="Menu" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 370.0
+offset_right = 567.0
+offset_bottom = 425.0
+text = "Menu
+"
+
+[connection signal="pressed" from="Control/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Control/Menu" to="." method="_on_menu_pressed"]

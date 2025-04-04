@@ -6,11 +6,12 @@ const DEACCEL = 20.0
 const MAX_SPEED = 2.0
 const ROT_SPEED = 1.0
 
+
 var prev_advance := false
 var dying := false
 var rot_dir = 4
 
-
+@onready var enemy = $"."
 @onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") \
 		* ProjectSettings.get_setting("physics/3d/default_gravity_vector")
 
@@ -49,6 +50,10 @@ func _integrate_forces(state: PhysicsDirectBodyState3D):
 				_animation_player.play(&"impact")
 				_animation_player.queue(&"extra/explode")
 				contact_collider.enabled = false
+				# reduce the global variable
+				Global.enemy_count -= 1
+				if (Global.enemy_count == Global.GAME_OVER_ENEMY_DOWN):
+					get_tree().change_scene_to_file("res://game_over_view.tscn")
 				$SoundWalkLoop.stop()
 				$SoundHit.play()
 				return
@@ -80,6 +85,12 @@ func _integrate_forces(state: PhysicsDirectBodyState3D):
 	state.set_linear_velocity(lin_velocity)
 	prev_advance = advance
 
+func _process(delta: float) -> void:
+	if global_position.y <= -12:
+		dying = true
+		Global.enemy_count -= 1
+		if (Global.enemy_count == Global.GAME_OVER_ENEMY_DOWN):
+				get_tree().change_scene_to_file("res://game_over_view.tscn")
 
 func _die():
 	queue_free()

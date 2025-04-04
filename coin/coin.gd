@@ -10,4 +10,4 @@ func _on_coin_body_enter(body):
 		taken = true
 		# We've already checked whether the colliding body is a Player, which has a `coins` property.
 		# As a result, we can safely increment its `coins` property.
-		body.coins += 1
+		Global.coins += 1

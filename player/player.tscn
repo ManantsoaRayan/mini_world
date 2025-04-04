@@ -1,7 +1,6 @@
 [gd_scene load_steps=36 format=4 uid="uid://cc4idhykjp5f5"]
 
 [ext_resource type="Script" uid="uid://blj33wbhrpikx" path="res://player/player.gd" id="1"]
-[ext_resource type="Script" uid="uid://f3esinp3ccoc" path="res://player/follow_camera.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://yd1e7ai2k5cr" path="res://player/player.glb" id="3_uccbe"]
 [ext_resource type="Material" uid="uid://be3ssftlblkjn" path="res://player/player_glow.tres" id="4_8t03j"]
 [ext_resource type="Texture2D" uid="uid://kujhqacj3v72" path="res://player/controls/osb_up.webp" id="4_lmv6w"]
@@ -11,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cdx3i7hr2acow" path="res://player/sound_shoot.wav" id="7"]
 [ext_resource type="Texture2D" uid="uid://bw76q621n8fie" path="res://player/controls/osb_right.webp" id="7_yth2f"]
 [ext_resource type="AudioStream" uid="uid://bplqk77bffdxr" path="res://player/sound_jump.wav" id="8"]
+[ext_resource type="Script" uid="uid://du6tulm1ne52m" path="res://player/head.gd" id="11_2ieo8"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.4
@@ -318,16 +318,6 @@ script = ExtResource("1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 shape = SubResource("1")
 
-[node name="Target" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95244, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Target"]
-transform = Transform3D(1, 0, 0, 0, 0.871263, 0.490817, 0, -0.490817, 0.871263, 0, 2.59805, 1.25672)
-current = true
-fov = 74.0
-near = 0.1
-script = ExtResource("2")
-
 [node name="Player" parent="." instance=ExtResource("3_uccbe")]
 
 [node name="Skeleton3D" parent="Player/Skeleton" index="0"]
@@ -356,7 +346,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94071, 3.6408, 3.3802)
 
 [node name="CoinCount" type="Label3D" parent="Player/Skeleton" index="2"]
 unique_name_in_owner = true
-transform = Transform3D(-3.33333, 0, -2.91409e-07, 0, 3.33333, 0, 2.91409e-07, 0, -3.33333, 0, 7.51037, 0.531589)
+transform = Transform3D(-3.33333, 0, -2.91409e-07, 0, 3.33333, 0, 2.91409e-07, 0, -3.33333, 1.18513, 7.51037, 0.531589)
 double_sided = false
 no_depth_test = true
 modulate = Color(1, 0.8, 0.4, 1)
@@ -388,6 +378,48 @@ text = "123"
 font_size = 48
 
 [node name="Parallax4" type="Label3D" parent="Player/Skeleton/CoinCount"]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, -0.04)
+double_sided = false
+no_depth_test = true
+modulate = Color(0.2, 0.159333, 0.078, 1)
+text = "123"
+font_size = 48
+
+[node name="LifeCount" type="Label3D" parent="Player/Skeleton" index="3"]
+unique_name_in_owner = true
+transform = Transform3D(-3.33333, 0, -2.91409e-07, 0, 3.33333, 0, 2.91409e-07, 0, -3.33333, -1.80062, 7.51037, 0.531589)
+double_sided = false
+no_depth_test = true
+modulate = Color(0.432888, 0.978564, 1.15514e-06, 1)
+text = "3
+"
+font_size = 48
+
+[node name="Parallax" type="Label3D" parent="Player/Skeleton/LifeCount"]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, -0.01)
+double_sided = false
+no_depth_test = true
+modulate = Color(0.458546, 0.758609, 0.281502, 1)
+text = "123"
+font_size = 48
+
+[node name="Parallax2" type="Label3D" parent="Player/Skeleton/LifeCount"]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, -0.02)
+double_sided = false
+no_depth_test = true
+modulate = Color(0.6, 0.48, 0.24, 1)
+text = "123"
+font_size = 48
+
+[node name="Parallax3" type="Label3D" parent="Player/Skeleton/LifeCount"]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, -0.03)
+double_sided = false
+no_depth_test = true
+modulate = Color(0.4, 0.318667, 0.156, 1)
+text = "123"
+font_size = 48
+
+[node name="Parallax4" type="Label3D" parent="Player/Skeleton/LifeCount"]
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, -0.04)
 double_sided = false
 no_depth_test = true
@@ -456,5 +488,13 @@ albedo_mix = 0.8
 upper_fade = 3.99999
 lower_fade = 1.0
 cull_mask = 1048573
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65621, 0)
+script = ExtResource("11_2ieo8")
+sensitivity = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(-1, 0, 8.74228e-08, 3.9293e-08, 0.893301, 0.449459, -7.80948e-08, 0.449459, -0.893301, 0.413466, 1.12578, -2.43978)
 
 [editable path="Player"]
