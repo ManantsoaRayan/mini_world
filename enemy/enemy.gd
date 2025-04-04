@@ -85,12 +85,5 @@ func _integrate_forces(state: PhysicsDirectBodyState3D):
 	state.set_linear_velocity(lin_velocity)
 	prev_advance = advance
 
-func _process(delta: float) -> void:
-	if global_position.y <= -12:
-		dying = true
-		Global.enemy_count -= 1
-		if (Global.enemy_count == Global.GAME_OVER_ENEMY_DOWN):
-				get_tree().change_scene_to_file("res://game_over_view.tscn")
-
 func _die():
 	queue_free()
